@@ -5,11 +5,6 @@ class Management:
         self.contacts = [];
 
     def createContact(self, name, phone, email):
-        if(len(phone) != 11):
-            raise ValueError("Telefone inválido");
-        if("@" not in email):
-            raise ValueError("Email inválido");
-        
         self.contacts.append(Contact(name, phone, email));
     
     def findByName(self, name):
@@ -25,3 +20,14 @@ class Management:
     
     def listContacts(self):
         return self.contacts;
+
+    def updateContactByIndex(self, index, name, phone, email):
+        
+        if(name != ""):
+            self.contacts[index].setName(name);
+        
+        if(phone != ""):
+            self.contacts[index].setPhone(phone);
+        
+        if(email != ""):
+            self.contacts[index].setEmail(email);
