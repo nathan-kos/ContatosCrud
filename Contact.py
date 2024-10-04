@@ -18,7 +18,15 @@ class Contact:
         self.name = name;
 
     def setPhone(self, phone):
+        #checking if phone has 11 digits
+        if(len(phone) != 11):
+            raise ValueError("Telefone inválido");
+
         self.phone = phone;
 
     def setEmail(self, email):
+        #checking if email has @
+        if("@" not in email):
+            raise ValueError("Email inválido");
+    
         self.email = email;
