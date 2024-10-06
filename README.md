@@ -17,5 +17,3 @@
 - Busca de contatos por nome
 - Exclusão de contatos por nome
 - Edição de contatos
-
-#### Obrigado pela atenção!
